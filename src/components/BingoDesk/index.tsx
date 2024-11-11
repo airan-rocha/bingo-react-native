@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, ImageBackground } from 'react-native';
 
 import { styles } from './styles';
 import { resetBingo, sortearBimgo } from './actions';
+import { ButtonB } from '../ButtonB';
+import bingoBackground from '../../../assets/bingoBackground.png'
 
 export function BingoDesk() {
     const [sorteados, setSorteados] = useState([]);
@@ -12,13 +14,15 @@ export function BingoDesk() {
     function UltimosSorteados () { 
         return(
             <>
-                <Text>Bingo</Text>
+                <Text>Bola da vez</Text>
                 <Text style={styles.textUltimoSorteado}>{ultimoSorteado || "B"}</Text>
                 <Text style={styles.ultimosSorteadosTitle}>últimos números sorteados</Text>
                 <View style={styles.ultimosSorteadosContainer}>
-                    <Text style={styles.sorteadosText}>{ultimosSorteados[0] == ultimoSorteado? "-" : ultimosSorteados[0] || "-"}</Text>
-                    <Text style={styles.sorteadosText}>{ultimosSorteados[1] == ultimoSorteado? "-" : ultimosSorteados[1] || "-"}</Text>
-                    <Text style={styles.sorteadosText}>{ultimosSorteados[2] == ultimoSorteado? "-" : ultimosSorteados[2] || "-"}</Text>
+                    <Text style={styles.sorteadosText}>{ultimosSorteados[0] == ultimoSorteado? "B" : ultimosSorteados[0] || "B"}</Text>
+                    <Text style={styles.sorteadosText}>{ultimosSorteados[1] == ultimoSorteado? "I" : ultimosSorteados[1] || "I"}</Text>
+                    <Text style={styles.sorteadosText}>{ultimosSorteados[2] == ultimoSorteado? "N" : ultimosSorteados[2] || "N"}</Text>
+                    <Text style={styles.sorteadosText}>{ultimosSorteados[3] == ultimoSorteado? "G" : ultimosSorteados[3] || "G"}</Text>
+                    <Text style={styles.sorteadosText}>{ultimosSorteados[4] == ultimoSorteado? "O" : ultimosSorteados[4] || "O"}</Text>
                 </View>
             </>
         )
@@ -29,11 +33,14 @@ export function BingoDesk() {
             <>
                 <Text style={styles.sorteadosTitle}>Números Sorteados</Text>
                 <View style={styles.sorteadosContainer}>
-                {
-                    sorteados.map((value, index) => <Text key={index} style={styles.sorteadosText}>{value}</Text>)
-                }
+                    <ImageBackground style={styles.sorteadosBgImage} resizeMode='cover' source={bingoBackground}>
+
+                    {
+                        sorteados.map((value, index) => <Text key={index} style={styles.sorteadosText}>{value}</Text>)
+                    }
+                    </ImageBackground>
                 </View>
-                <Button title='Sortear' onPress={() => sortearBimgo(sorteados, setUltimoSorteado, ultimosSorteados)} />
+                <ButtonB title='Sortear' size={30} onPress={() => sortearBimgo(sorteados, setUltimoSorteado, ultimosSorteados)} />
             </>
         )
     }
@@ -41,7 +48,7 @@ export function BingoDesk() {
   return (
     <View style={styles.container}>
         {UltimosSorteados()}
-        <Button title='Reset' onPress={() => resetBingo(setSorteados, setUltimoSorteado, setUltimosSorteados)} />
+        <ButtonB title='Reset' color='#5c5c5c' onPress={() => resetBingo(setSorteados, setUltimoSorteado, setUltimosSorteados)} />
         {NumerosSorteados()}
     </View>
   );

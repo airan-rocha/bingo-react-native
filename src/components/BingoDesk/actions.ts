@@ -30,7 +30,7 @@ export function sortearBimgo (
                 //seta as configurações do ultimos três numeros sorteados
                 ultimosSorteados.push(numero);
 
-                if(ultimosSorteados.length > 4){
+                if(ultimosSorteados.length > 6){
                     ultimosSorteados.shift()
                 }
                 //fim 
