@@ -20,7 +20,7 @@ Para utilizá-lo, basta pressionar o botão **[SORTEAR]** e o número da "bola d
 
 Eu ainda não disponibilizei esse app na loja de aplicativos, mas você pode baixá-lo no formato .APK na página de Releases aqui no GitHub (link abaixo) e instalar no seu celular Android:
 
-* [Releases](https://github.com/airan-rocha/bingo-react-native/releases/tag/publish)
+* [Releases](https://github.com/airan-rocha/bingo-react-native/releases)
 
 
 Fale comigo pelo [LinkedIn](https://www.linkedin.com/in/airan-rocha/)
