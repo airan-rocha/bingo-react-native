@@ -18,10 +18,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#c8fed4"
-      }
+      },
+      "package": "com.airan.bingo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d1982d54-3133-4b63-a722-67ba76645f03"
+      }
+    },
+    "owner": "airan"
   }
 }
