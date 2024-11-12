@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Button, ImageBackground } from 'react-native';
+import { View, Text, Button, ImageBackground, ScrollView } from 'react-native';
 
 import { styles } from './styles';
 import { resetBingo, sortearBimgo } from './actions';
@@ -34,10 +34,13 @@ export function BingoDesk() {
                 <Text style={styles.sorteadosTitle}>Números Sorteados</Text>
                 <View style={styles.sorteadosContainer}>
                     <ImageBackground style={styles.sorteadosBgImage} resizeMode='cover' source={bingoBackground}>
-
-                    {
-                        sorteados.map((value, index) => <Text key={index} style={styles.sorteadosText}>{value}</Text>)
-                    }
+                        <ScrollView>
+                            <View style={styles.sorteadosView}>
+                                {
+                                    sorteados.map((value, index) => <Text key={index} style={styles.sorteadosText}>{value}</Text>)
+                                }
+                            </View>
+                        </ScrollView>
                     </ImageBackground>
                 </View>
                 <ButtonB title='Sortear' size={30} onPress={() => sortearBimgo(sorteados, setUltimoSorteado, ultimosSorteados)} />

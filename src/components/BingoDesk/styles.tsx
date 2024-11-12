@@ -44,16 +44,19 @@ export const styles = StyleSheet.create({
     flexWrap: "wrap",
     backgroundColor: "#e5dfd2",
     borderRadius: 10,
-    minHeight: 400,
+    height: 390,
     width: "95%",
     padding: 15,
     marginBottom: 15,
   },
   sorteadosBgImage: {
     flex: 1,
+    height: "100%",
+  },
+  sorteadosView: {
+    flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",
-    height: "100%",
   },
   sorteadosText: {
     backgroundColor: "#000000",
