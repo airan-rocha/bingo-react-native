@@ -14,7 +14,7 @@ Para utilizá-lo, basta pressionar o botão **[SORTEAR]** e o número da "bola d
 >
 > - [x] fácil de usar
 > 
-> - [x] cumpre o quê prometo
+> - [x] cumpre o quê promete
 > 
 > - [x] template agradável
 
