@@ -3,7 +3,7 @@
 >
 > Feito com React Native
 
-Este app foi feito como um projeto pessoal para testar minhas habilidades com REACT NATIVE e servir como parte do meu portifófio aqui no *Git Hub*.
+Este app foi feito como um projeto pessoal para testar minhas habilidades com REACT NATIVE e servir como parte do meu portfólio aqui no *Git Hub*.
 
 Para utilizá-lo, basta pressionar o botão **[SORTEAR]** e o número da "bola da vez" irá aparecer no topo da tela do aplicativo. Para limpar os números sorteados e começar novamente, é só pressionar o botão **[RESET]**.
 
@@ -18,7 +18,7 @@ Para utilizá-lo, basta pressionar o botão **[SORTEAR]** e o número da "bola d
 > 
 > - [x] template agradável
 
-Eu ainda não diponibilizei esse app na loja de aplicativos, mas você pode baixá-lo no formato .APK na página de Releases aqui no GitHub (link abaixo) e instalar no seu celular Android:
+Eu ainda não disponibilizei esse app na loja de aplicativos, mas você pode baixá-lo no formato .APK na página de Releases aqui no GitHub (link abaixo) e instalar no seu celular Android:
 
 * [Releases](https://github.com/airan-rocha/bingo-react-native/releases/tag/publish)
 
