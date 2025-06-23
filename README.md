@@ -1,5 +1,5 @@
 # App Bingo
-> V. 1.0.2
+> V. 1.1.1
 >
 > Feito com React Native
 
