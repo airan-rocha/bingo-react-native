@@ -7,15 +7,19 @@ import { ButtonB } from '../ButtonB';
 import bingoBackground from '../../../assets/bingoBackground.png'
 
 export function BingoDesk() {
-    const [sorteados, setSorteados] = useState([]);
-    const [ultimoSorteado, setUltimoSorteado] = useState();
-    const [ultimosSorteados, setUltimosSorteados] = useState([]); 
+    const [sorteados, setSorteados] = useState<Array<number>>([]);
+    const [ultimoSorteado, setUltimoSorteado] = useState<number | undefined>();
+    const [ultimosSorteados, setUltimosSorteados] = useState<number[]>([]); 
+    const [coluna, setColuna] = useState<string>("*");
 
     function UltimosSorteados () { 
         return(
             <>
                 <Text>Bola da vez</Text>
-                <Text style={styles.textUltimoSorteado}>{ultimoSorteado || "B"}</Text>
+                <View style={styles.boxUltimoSorteado}>
+                    <Text style={styles.textColuna}>{coluna}</Text>
+                    <Text style={styles.textUltimoSorteado}>{ultimoSorteado || "B"}</Text>
+                </View>
                 <Text style={styles.ultimosSorteadosTitle}>últimos números sorteados</Text>
                 <View style={styles.ultimosSorteadosContainer}>
                     <Text style={styles.sorteadosText}>{ultimosSorteados[0] == ultimoSorteado? "B" : ultimosSorteados[0] || "B"}</Text>
@@ -43,7 +47,7 @@ export function BingoDesk() {
                         </ScrollView>
                     </ImageBackground>
                 </View>
-                <ButtonB title='Sortear' size={30} onPress={() => sortearBimgo(sorteados, setUltimoSorteado, ultimosSorteados)} />
+                <ButtonB title='Sortear' size={30} onPress={() => sortearBimgo(sorteados, setUltimoSorteado, ultimosSorteados, setColuna)} />
             </>
         )
     }
@@ -51,7 +55,7 @@ export function BingoDesk() {
   return (
     <View style={styles.container}>
         {UltimosSorteados()}
-        <ButtonB title='Reset' color='#5c5c5c' onPress={() => resetBingo(setSorteados, setUltimoSorteado, setUltimosSorteados)} />
+        <ButtonB title='Reset' color='#5c5c5c' onPress={() => resetBingo(setSorteados, setUltimoSorteado, setUltimosSorteados, setColuna)} />
         {NumerosSorteados()}
     </View>
   );

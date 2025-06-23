@@ -8,6 +8,21 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  boxUltimoSorteado: {
+    flexDirection: 'row',
+    left: -20,
+  },
+  textColuna: {
+    backgroundColor: "#bf1212",
+    color: "#fff",
+    fontSize: 25,
+    borderRadius: 50,
+    width: 40,
+    height: 40,
+    textAlign: "center",
+    textAlignVertical: "center",
+    marginBottom: 15,
+  },
   textUltimoSorteado: {
     backgroundColor: "#000000",
     color: "#fff",
